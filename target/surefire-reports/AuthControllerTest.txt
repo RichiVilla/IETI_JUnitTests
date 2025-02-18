@@ -1,0 +1,28 @@
+-------------------------------------------------------------------------------
+Test set: AuthControllerTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 1.530 s <<< FAILURE! -- in AuthControllerTest
+AuthControllerTest.testLoginMissingCredentials -- Time elapsed: 1.380 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "org.springframework.security.core.userdetails.UserDetails.getPassword()" because "userDetails" is null
+	at com.edu.eci.controller.AuthController.login(AuthController.java:41)
+	at AuthControllerTest.testLoginMissingCredentials(AuthControllerTest.java:94)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+
+AuthControllerTest.testLoginUserNotFound -- Time elapsed: 0.006 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "org.springframework.security.core.userdetails.UserDetails.getPassword()" because "userDetails" is null
+	at com.edu.eci.controller.AuthController.login(AuthController.java:41)
+	at AuthControllerTest.testLoginUserNotFound(AuthControllerTest.java:123)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+
+AuthControllerTest.testLoginNullRequest -- Time elapsed: 0.005 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "java.util.Map.get(Object)" because "request" is null
+	at com.edu.eci.controller.AuthController.login(AuthController.java:32)
+	at AuthControllerTest.testLoginNullRequest(AuthControllerTest.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+
